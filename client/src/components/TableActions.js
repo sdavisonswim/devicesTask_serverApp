@@ -19,19 +19,19 @@ const TableActions = ({ devices, onFilter, onSort }) => {
 
     const handleFilterChange = (filter) => {
         setFilterOption(filter);
-        applyFilterSortSearch(filter, sortOption); // Apply both filter and sort 
+        applyFilterSortSearch(filter, sortOption);
     };
 
     const handleSortChange = (sort) => {
         setSortOption(sort);
-        applyFilterSortSearch(filterOption, sort); // Apply both filter and sort 
+        applyFilterSortSearch(filterOption, sort);
     };
 
     const handleRefresh = () => {
         setSearchTerm('');
         setFilterOption('Device Type: All');
         setSortOption('Sort by: Name (Ascending)');
-        setFilteredDevices(devices); // Reset to the original device list
+        setFilteredDevices(devices);
     };
 
     const applyFilterSortSearch = (filter, sort, search) => {
@@ -48,11 +48,11 @@ const TableActions = ({ devices, onFilter, onSort }) => {
         }
 
         setFilteredDevices([...filtered]);
-        onFilter([...filtered]); // Let the parent component know about the sorted and filtered devices 
+        onFilter([...filtered]);
     };
 
     useEffect(() => {
-        applyFilterSortSearch(filterOption, sortOption, searchTerm); // Apply filter and sort when devices, filterOption, or sortOption change 
+        applyFilterSortSearch(filterOption, sortOption, searchTerm);
     }, [devices, filterOption, sortOption, searchTerm]);
 
     return (

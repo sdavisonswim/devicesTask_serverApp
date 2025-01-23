@@ -7,7 +7,7 @@
 .devices-title {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #E7E8EB;
     height: 31px;
     padding-left: 12px;
 }
@@ -47,18 +47,19 @@
     position: absolute;
     right: 24px;
     width: 120px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: #FFFFFF;
+    border: none;
+    outline: 1px solid #48446940;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px #211F3326;
     z-index: 1000;
-    margin-top: 5px; /* Add spacing between the icon and the dropdown */ 
-} 
+    margin-top: 5px;
+}
 
 .dropdown-item {
     padding: 8px;
     cursor: pointer;
-    white-space: nowrap; /* Prevent text wrapping */ 
+    white-space: nowrap;
 }
 
 .device-delete {

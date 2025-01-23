@@ -6,7 +6,6 @@ const ReusableDropdown = ({ options, placeholder, value, onChange, className }) 
     const [selectedOption, setSelectedOption] = useState(value || "");
 
     useEffect(() => {
-        console.log('setselectedoption', value);
         setSelectedOption(value || "");
     }, [value]);
 
@@ -14,12 +13,7 @@ const ReusableDropdown = ({ options, placeholder, value, onChange, className }) 
         setIsOpen(!isOpen);
     };
 
-    // const formatOption = (option) => {
-    //     return option + " workstation";
-    // };
-
     const handleOptionClick = (option) => {
-        console.log('option', option, option, option.toUpperCase());
         setSelectedOption(option);
         setIsOpen(false);
         onChange(option);

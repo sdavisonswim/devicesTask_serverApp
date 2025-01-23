@@ -17,19 +17,9 @@ const DeviceModal = ({ isOpen, closeModal, device = {}, onSubmit }) => {
         setHddCapacity(device.hdd_capacity || '');
     }, [device]);
 
-    // useEffect(() => {
-    //     console.log('device', device);
-    //     if (device.system_name) {
-    //         const [sysName, id] = device.system_name.split('-');
-    //         setSystemName(sysName);
-    //         setDeviceId(id ? `-${id}` : '');
-    //     }
-    //     setDeviceType(device.type ? `${device.type} workstation` : '');
-    //     setHddCapacity(device.hdd_capacity || '');
-    // }, [device]);
-
     const handleSystemNameChange = (e) => {
-        let value = e.target.value.toUpperCase().replace(/\s+/g, '-'); // Convert to uppercase and replace spaces with hyphens
+        // Convert to uppercase and replace spaces with hyphens
+        let value = e.target.value.toUpperCase().replace(/\s+/g, '-');
         setSystemName(value);
     };
 

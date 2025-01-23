@@ -28,10 +28,6 @@ function Device({ device }) {
         };
     };
 
-    const capitalizeFirstLetter = (string) => {
-        return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
-    };
-
     return (
         <div className="device-cell">
             <div className="device-cell-row">
