@@ -2,21 +2,40 @@
   "name": "api-devices",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./client/src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "babel-node index.js"
+    "start": "nodemon server/index.js",
+    "dev": "webpack serve --mode development",
+    "build": "webpack --mode development"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.26.3",
     "babel-cli": "^6.26.0",
+    "babel-loader": "^9.2.1",
     "babel-preset-env": "^1.7.0",
     "body-parser": "^1.19.0",
     "consign": "^0.1.6",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
+    "fsevents": "^2.3.3",
     "morgan": "^1.9.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "shortid": "^2.2.14"
+  },
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "install": "^0.13.0",
+    "nodemon": "^3.1.9",
+    "npm": "^11.0.0",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
   }
 }

@@ -1,0 +1,8 @@
+/* Global Header styles */
+.global-header {
+    padding: 0px 24px 0px 24px;
+    height: 50px;
+    background-color: #002A42;
+    display: flex;
+    align-items: center;
+}
